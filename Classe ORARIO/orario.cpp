@@ -1,4 +1,4 @@
-#include<orario.h>
+#include</home/davide/Documenti/Code/P2/Classe ORARIO/orario.h>
 
 orario::orario(int o,int m,int s){
     if(o<0 || o>23 || m<0 || m>59 || s<0 || s>59){

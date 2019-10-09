@@ -1,3 +1,4 @@
+//#include</home/davide/Documenti/Code/P2/Classe ORARIO/orario.cpp>
 class orario{
     private:
     int sec;
