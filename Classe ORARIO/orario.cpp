@@ -20,8 +20,8 @@ int orario::Secondi() const{
     return sec%60;
 }
 orario orario::UnOraPiuTardi() const{
-    int aux;
-    aux=sec+3600;
+    orario aux;
+    aux.sec=/*this->*/sec+3600;
     return aux;
 }
 void orario::AvanzaUnOra(){
