@@ -5,6 +5,10 @@ class orario{
     public:
     orario operator+(orario) const;
     orario operator-(orario) const;
+    bool operator>(orario) const;
+    bool operator<(orario) const;
+    bool operator==(orario) const;
+    bool operator!=(orario) const;
     orario(int=0,int=0,int=0);
     operator int();
     int Ore()const;

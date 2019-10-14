@@ -17,6 +17,34 @@ orario orario::operator-(orario o) const{
     aux.sec=(sec-o.sec)%86400;
     return aux;
 }
+bool orario::operator>(orario o) const{
+    if(sec>o.sec){
+        return true;
+    }else{
+        return false;
+    }
+}
+bool orario::operator<(orario o) const{
+    if(sec<o.sec){
+        return true;
+    }else{
+        return false;
+    }
+}
+bool orario::operator==(orario o) const{
+    if(sec==o.sec){
+        return true;
+    }else{
+        return false;
+    }
+}
+bool orario::operator!=(orario o) const{
+    if(sec!=o.sec){
+        return true;
+    }else{
+        return false;
+    }
+}
 orario::operator int(){
     return sec;
 }
