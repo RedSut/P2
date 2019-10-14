@@ -7,6 +7,16 @@ orario::orario(int o,int m,int s){
         sec = o*3600 + m*60 + s;
     }
 };
+orario orario::operator+(orario o) const{
+    orario aux;
+    aux.sec=(sec+o.sec)%86400;
+    return aux;
+}
+orario orario::operator-(orario o) const{
+    orario aux;
+    aux.sec=(sec-o.sec)%86400;
+    return aux;
+}
 orario::operator int(){
     return sec;
 }
