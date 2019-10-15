@@ -1,4 +1,5 @@
 #include</home/davide/Documenti/Code/P2/Classe ORARIO/orario.h>
+#include<iostream>
 
 orario::orario(int o,int m,int s){
     if(o<0 || o>23 || m<0 || m>59 || s<0 || s>59){
@@ -64,4 +65,7 @@ orario orario::UnOraPiuTardi() const{
 }
 void orario::AvanzaUnOra(){
     sec+=3600;
+}
+std::ostream& operator<<(std::ostream& os,const orario& o){
+    return os <<o.Ore()<<":"<<o.Minuti()<<":"<<o.Secondi();
 }

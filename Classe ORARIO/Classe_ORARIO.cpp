@@ -40,4 +40,7 @@ int main(){
     }else{
         std::cout<<Ora.Ore()<<":"<<Ora.Minuti()<<" è uguale a "<<Ora1.Ore()<<":"<<Ora1.Minuti()<<std::endl;
     }
+    //OUTPUT
+    orario Out(17,17,17);
+    std::cout<<"Orario Out: "<<Out<<std::endl;
 }

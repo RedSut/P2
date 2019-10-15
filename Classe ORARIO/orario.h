@@ -1,4 +1,5 @@
 //#include</home/davide/Documenti/Code/P2/Classe ORARIO/orario.cpp>
+#include<iostream>
 class orario{
     private:
     int sec;
@@ -17,3 +18,4 @@ class orario{
     orario UnOraPiuTardi()const;
     void AvanzaUnOra();
 };
+//std::ostream& operator<<(std::ostream,const orario&);
