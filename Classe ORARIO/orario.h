@@ -18,4 +18,4 @@ class orario{
     orario UnOraPiuTardi()const;
     void AvanzaUnOra();
 };
-//std::ostream& operator<<(std::ostream,const orario&);
+//std::ostream& operator<<(std::ostream,const orario&); FA CONFLITTO CON QUELLO IN orario.cpp (!!)

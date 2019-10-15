@@ -11,7 +11,7 @@ class C {
 
 int main() {
     C c;
-    std::cout << c.x << std::endl; // stampa: 8
+    std::cout << c.x << std::endl; // stampa 8
     c.m();
     std::cout << c.x << std::endl; // stampa 4
 }
