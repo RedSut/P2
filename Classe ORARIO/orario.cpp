@@ -1,4 +1,4 @@
-#include</home/davide/Documenti/Code/P2/Classe ORARIO/orario.h>
+#include "orario.h"
 #include<iostream>
 
 orario::orario(int o,int m,int s){

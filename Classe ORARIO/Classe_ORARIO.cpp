@@ -1,6 +1,6 @@
 #include<iostream>
-//#include</home/davide/Documenti/Code/P2/Classe ORARIO/orario.h>
-#include</home/davide/Documenti/Code/P2/Classe ORARIO/orario.cpp>
+#include "orario.cpp"
+//#include "orario.h"
 
 int main(){
     orario O(14,45,19); 
