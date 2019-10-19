@@ -1,3 +1,5 @@
+#ifndef POINT_H
+#define POINT_H
 #include<iostream>
 class Point{
     private:
@@ -12,3 +14,4 @@ class Point{
 };
 std::ostream& operator<<(std::ostream&, const Point&);
 Point operator+(const Point&, const Point&); //Lo metto fuori dalla classe per mantenere la proprietà commutativa
+#endif // POINT_H

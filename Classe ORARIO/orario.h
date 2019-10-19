@@ -1,4 +1,6 @@
 //#include</home/davide/Documenti/Code/P2/Classe ORARIO/orario.cpp>
+#ifndef ORARIO_H
+#define ORARIO_H
 #include<iostream>
 class orario{
     private:
@@ -18,4 +20,5 @@ class orario{
     orario UnOraPiuTardi()const;
     void AvanzaUnOra();
 };
-//std::ostream& operator<<(std::ostream,const orario&); FA CONFLITTO CON QUELLO IN orario.cpp (!!)
+std::ostream& operator<<(std::ostream&,const orario&); //FA CONFLITTO CON QUELLO IN orario.cpp (!!)
+#endif

@@ -1,5 +1,5 @@
 #include<iostream>
-#include "Point.cpp"
+#include "Point.h"
 
 int main(){
     Point P1(1,2,3),P2(3,0,9),P3;
