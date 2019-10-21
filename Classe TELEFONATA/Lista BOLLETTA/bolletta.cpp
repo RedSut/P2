@@ -12,7 +12,7 @@ bool bolletta::Vuota()const{
     return first==0;
 }
 void bolletta::Aggiungi_Telefonata(const telefonata& t){
-
+    *first=nodo(t,first);
 }
 void bolletta::Togli_Telefonata(const telefonata& t){
     nodo*p=first,*prec=nullptr;
