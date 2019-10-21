@@ -1,6 +1,8 @@
 //ORARIO has-a TELEFONATA
 #include "telefonata.h"
 
+telefonata::telefonata(){ numero==0; }
+
 telefonata::telefonata(const orario& i,const orario& f,const int& n):inizio(i),fine(f),numero(n){/*vuoto*/};
 
 orario telefonata::Inizio()const{

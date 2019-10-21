@@ -8,6 +8,7 @@ class telefonata{
         orario inizio, fine;
         int numero; //da modificare il tipo
     public:
+        telefonata();
         telefonata(const orario&,const orario&,const int&);
         orario Inizio()const;
         orario Fine()const;
