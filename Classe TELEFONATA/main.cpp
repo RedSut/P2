@@ -20,6 +20,7 @@ int main(){
     //OPERATORE OUTPUT TELEFONATA
     std::cout<<"T1: "<<T1<<std::endl;
     std::cout<<"T2: "<<T2<<std::endl;
+    std::cout<<"T3: "<<T3<<std::endl;
     //OPERATORE ==
     telefonata T4(T1);
     if(T4==T1){
@@ -37,13 +38,19 @@ int main(){
     b.Aggiungi_Telefonata(T1);
     b.Aggiungi_Telefonata(T2);
     b.Aggiungi_Telefonata(T3);
+    b2=b;
+    std::cout<<"La somma delle durate di b è: "<<Somma_Durate(b)<<std::endl;
     b.Togli_Telefonata(T2);
+    std::cout<<"La somma delle durate di b è: "<<Somma_Durate(b)<<std::endl;
+    std::cout<<"La somma delle durate di b2 è: "<<Somma_Durate(b2)<<std::endl;
     if(b.Vuota()){
         std::cout<<"b è vuota"<<std::endl;
     }else{
         std::cout<<"b NON è vuota"<<std::endl;
     }
     std::cout<<b.EstraiUna()<<std::endl;
+    std::cout<<"La somma delle durate di b è: "<<Somma_Durate(b)<<std::endl;
     std::cout<<b.EstraiUna()<<std::endl;
+    std::cout<<"La somma delle durate di b è: "<<Somma_Durate(b)<<std::endl;
 
 }
