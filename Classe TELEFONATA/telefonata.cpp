@@ -20,5 +20,5 @@ bool telefonata::operator==(const telefonata t)const{
                                                                  // l'operazione darebbe un ERRORE (!)
 }                                                                 
 std::ostream& operator<<(std::ostream& os,const telefonata t){
-    return os<<std::endl<<"INIZIO: "<<t.Inizio()<<std::endl<<"FINE: "<<t.Fine()<<std::endl<<"NUMERO: "<<t.Numero()<<std::endl;
+    return os<<std::endl<<"INIZIO: "<<t.Inizio()<<std::endl<<"FINE: "<<t.Fine()<<std::endl<<"NUMERO: "<<t.Numero();
 }
