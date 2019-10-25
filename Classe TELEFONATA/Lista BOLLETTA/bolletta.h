@@ -5,6 +5,7 @@
 class bolletta{
     public:
         bolletta();
+        ~bolletta();
         bolletta(const bolletta&); // ridefinizione del costruttore di copia
         bool Vuota()const;
         void Aggiungi_Telefonata(const telefonata&);
@@ -15,6 +16,7 @@ class bolletta{
         class nodo{ // definisco un'altra classe nodo nella parte privata di bolletta con cui rappresento la lista
             public:
                 nodo();
+                ~nodo();
                 nodo(const telefonata&,nodo*);
                 telefonata info;
                 nodo* next;

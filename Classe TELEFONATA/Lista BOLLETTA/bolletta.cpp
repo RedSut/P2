@@ -4,9 +4,22 @@
 
 bolletta::nodo::nodo() : next(nullptr) { } //usa il costruttore di default per info
 
-bolletta::nodo::nodo(const telefonata& t,nodo* s) : info(t),next(s) { }
+bolletta::nodo::nodo(const telefonata& t,nodo* s) : info(t), next(s) { }
+
+bolletta::nodo::~nodo(){ // nel distruttore non bisogna mettere la lista di inizializzaione
+    // invocazione del distruttore standard di telefonata e deallocazione automatica di next (alla fine)
+    if(next!=0){
+        delete next; // chiamata ricorsiva
+    }
+}
 
 bolletta::bolletta() : first(nullptr) { }
+
+bolletta::~bolletta(){ // nel distruttore non bisogna mettere la lista di inizializzaione
+    if(first){
+        delete first; // chiama ~nodo()
+    }
+}
 
 bolletta::bolletta(const bolletta& b) : first(copia(b.first)) { } // ridefinizione del costruttore di copia di bolletta
 
