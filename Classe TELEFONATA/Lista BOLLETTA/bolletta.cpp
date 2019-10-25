@@ -2,6 +2,8 @@
 #include "bolletta.h"
 #include "../telefonata.h"
 
+// ------------------------------------- CLASSE NODO ----------------------------------------------------
+
 bolletta::nodo::nodo() : next(nullptr) { } //usa il costruttore di default per info
 
 bolletta::nodo::nodo(const telefonata& t,nodo* s) : info(t), next(s) { }
@@ -12,6 +14,34 @@ bolletta::nodo::~nodo(){ // nel distruttore non bisogna mettere la lista di iniz
         delete next; // chiamata ricorsiva
     }
 }
+// ------------------------------------- CLASSE ITERATORE ----------------------------------------------------
+
+bool bolletta::iteratore::operator==(const iteratore& i)const{
+    return punt==i.punt;
+}
+bool bolletta::iteratore::operator!=(const iteratore& i)const{
+    return punt!=i.punt;
+}
+bolletta::iteratore& bolletta::iteratore::operator++(){ // ++ prefisso
+    if(punt){
+        punt=punt->next;
+    }
+    return *this;
+}
+bolletta::iteratore bolletta::iteratore::operator++(int){ // ++ postfisso
+    iteratore aux(*this);
+    if(punt){
+        punt=punt->next;
+    }
+    return aux;
+}
+telefonata* bolletta::iteratore::operator->()const{
+    return &(punt->info);
+}
+telefonata& bolletta::iteratore::operator*()const{
+    return punt->info;
+}
+// ------------------------------------- CLASSE BOLLETTA ----------------------------------------------------
 
 bolletta::bolletta() : first(nullptr) { }
 
@@ -23,6 +53,19 @@ bolletta::~bolletta(){ // nel distruttore non bisogna mettere la lista di inizia
 
 bolletta::bolletta(const bolletta& b) : first(copia(b.first)) { } // ridefinizione del costruttore di copia di bolletta
 
+bolletta::iteratore bolletta::begin()const{
+    iteratore aux;
+    aux.punt=first;
+    return aux;
+}
+bolletta::iteratore bolletta::end()const{
+    iteratore aux;
+    aux.punt=nullptr;
+    return aux;
+}
+telefonata& bolletta::operator[](const bolletta::iteratore& it)const{
+    return it.punt->info;
+}
 bool bolletta::Vuota()const{
     return first==0;
 }
