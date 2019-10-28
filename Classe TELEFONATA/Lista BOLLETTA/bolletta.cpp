@@ -8,12 +8,12 @@ bolletta::nodo::nodo() : next(nullptr) { } //usa il costruttore di default per i
 
 bolletta::nodo::nodo(const telefonata& t,nodo* s) : info(t), next(s) { }
 
-bolletta::nodo::~nodo(){ // nel distruttore non bisogna mettere la lista di inizializzaione
+/*bolletta::nodo::~nodo(){ // nel distruttore non bisogna mettere la lista di inizializzaione
     // invocazione del distruttore standard di telefonata e deallocazione automatica di next (alla fine)
-    if(next!=0){
+    if(next!=nullptr){
         delete next; // chiamata ricorsiva
     }
-}
+}*/
 // ------------------------------------- CLASSE ITERATORE ----------------------------------------------------
 
 bool bolletta::iteratore::operator==(const iteratore& i)const{

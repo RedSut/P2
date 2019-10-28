@@ -7,7 +7,7 @@ class bolletta{
         class nodo{ // definisco un'altra classe nodo nella parte privata di bolletta con cui rappresento la lista
             public:
                 nodo();
-                ~nodo();
+                //~nodo();
                 nodo(const telefonata&,nodo*);
                 telefonata info;
                 nodo* next;
