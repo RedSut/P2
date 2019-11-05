@@ -1,11 +1,18 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
+template<class T>
+class QueueItem;
+
+template<class T>
+std::ostream& operator<<(std::ostream&, const Queue<T>&);
+
 template<class T> 
 class Queue{
 friend ostream& operator<< <T> (std::ostream&, const Queue<T>&);
 private:
     class QueueItem{
+    friend class Queue<T>;
     friend ostream& operator<< <T> (std::ostream&, const QueueItem<T>&);
     friend ostream& operator<< <T> (std::ostream&, const Queue<T>&);
     public:
@@ -78,9 +85,6 @@ std::ostream& operator<<(std::ostream& os, const Queue<T>& q){
     os << ")" << endl;
     return os;
 }
-
-template<class T>
-std::ostream& operator<<(std::ostream&, const QueueItem<T>&);
 
 template<class T>
 std::ostream& operator<<(std::ostream& os, const QueueItem<T>& qi){
