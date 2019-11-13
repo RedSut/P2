@@ -3,7 +3,7 @@
 #define ORARIO_H
 #include<iostream>
 class orario{
-    private:
+    protected:
     int sec;
     public:
     orario operator+(orario) const;
