@@ -10,3 +10,9 @@ int dataora::Mese()const{
 int dataora::Anno()const{
     return anno;
 }
+dataora::dataora(int g, int m, int a, orario o){
+    giorno=g;
+    mese=m;
+    anno=a;
+    sec=o;
+}
