@@ -1,11 +1,16 @@
-output: main.o dataora.o orario.o
-	g++ main.o dataora.o orario.o -o output
+all: compile display clean
 
-display: output
-	@echo "ECCO L'OUTPUT:"
+compile: main.o dataora.o orario.o
+	g++ main.o dataora.o orario.o -o output
+	@echo "----------------------------------------------"
+
+display:
+	@echo "----------------- OUTPUT: --------------------"
 	./output
+	@echo "----------------------------------------------"
 
 main.o: main.cpp
+	@echo "-------------- Compilazione ------------------"
 	g++ -c main.cpp
 
 dataora.o: dataora.cpp dataora.h
@@ -15,6 +20,6 @@ orario.o: Classe\ ORARIO/orario.cpp Classe\ ORARIO/orario.h
 	g++ -c Classe\ ORARIO/orario.cpp 
 
 clean:
+	@echo "------------- Pulizia dei file  --------------"
 	rm *.o output
-
-all: output display clean
+	@echo "----------------------------------------------"
