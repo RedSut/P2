@@ -14,5 +14,5 @@ dataora::dataora(int g, int m, int a, orario o){
     giorno=g;
     mese=m;
     anno=a;
-    sec=o;
+    sec=o; //credo sia pericoloso in quanto utilizza la conversione per avere o.sec
 }

@@ -9,4 +9,6 @@ int main(){
     std::cout<<"o1: "<<o1<<std::endl;
     std::cout<<"o2: "<<o2<<std::endl;
     std::cout<<"d1.Giorno: "<<d1.Giorno()<<std::endl;
+    std::cout<<"d1.Mese: "<<d1.Mese()<<std::endl;
+    std::cout<<"d1.Anno: "<<d1.Anno()<<std::endl;
 }
